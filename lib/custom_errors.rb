@@ -5,6 +5,7 @@ class Person
     @name = name
   end
 
+
   def get_married(person)
     self.partner = person
     if person.class != Person
@@ -12,7 +13,7 @@ class Person
         raise PartnerError
       rescue PartnerError => error
         puts error.message
-      end 
+      end
     else
       person.partner = self
     end
